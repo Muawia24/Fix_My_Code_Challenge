@@ -1,12 +1,21 @@
 #!/usr/bin/python3
+"""
+Square module
+"""
+
 
 class square():
-    
+    """
+    Square class
+    """
+
     width = 0
     height = 0
 
     
     def __init__(self, *args, **kwargs):
+        """ square initialization method """
+
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -15,12 +24,17 @@ class square():
         return self.width * self.height
 
     def PermiterOfMySquare(self):
+        """ square perimeter method """
+
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
+        """ string representation method """
+
         return "{}/{}".format(self.width, self.height)
 
 if __name__ == "__main__":
+    """ Square instance """
 
     s = square(width=12, height=9)
     print(s)
